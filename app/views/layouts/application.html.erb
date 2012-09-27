@@ -7,18 +7,136 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-<div class="navbar">
- <div class="navbar-inner">
- <a class="brand" href="#">Title</a>
- <ul class="nav">
- <li class="active"><a href="#">Home</a></li>
- <li><a href="#">Link</a></li>
- <li><a href="#">Link</a></li>
- </ul>
- </div>
-</div>
-<%= yield %>
-</div>
+	<div class="container">
+		<div class="navbar">
+ 			<div class="navbar-inner">
+ 				<a class="brand" href="#">Title</a>
+ 				<ul class="nav">
+ 					
+					<li class="active"><a href="#">Home</a></li>
+
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link2</a></li>
+
+					<li><a class="hidden-phone" href="#">Link3</a></li>
+			 		<li><a class="hidden-phone" href="#">Link4</a></li>
+			 		<li><a class="hidden-phone" href="#">Link5</a></li>
+			 		<li><a class="hidden-phone" href="#">Link6</a></li>
+			 		<li>
+			 			<div class="visible-phone">
+			 				<div class="dropdown">
+			 					<a class="btn btn-inverse" data-toggle="dropdown" href="#">Links<b class="caret"></b></a>
+    							
+    							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+   									<li><a tabindex="-1" href="#">Link3</a></li>
+									<li><a tabindex="-1" href="#">Link4</a></li>
+									<li><a tabindex="-1" href="#">Link5</a></li>
+									<li><a tabindex="-1" href="#">Link6</a></li>
+					    		</ul>
+					    	</div>
+					    </div>
+			 		</li>
+			 		<li><botton href="#myModalHide" role="button" class="btn btn-inverse" data-toggle="modal">Launch modal</botton></li>
+	 		 	</ul>
+				<form class="navbar-search pull-right">
+						<div class="controls">
+							<div class="input-prepend">
+								<span class="add-on"><img src=glyphicons_027_search.png width="20" height="20"></i></span>
+								<input class="span2" id="inputIcon" type="text" placeholder="Enter search data…">
+							</div>
+						</div>
+				</form>
+			</div>
+ 		</div>
+<div class="navbar navbar-inverse">
+	<div class="navbar-inner">
+		<a class="brand" href="#">BSS</a>
+		<ul class="nav">
+    	    <li class="divider-vertical"></li>
+    	 	<li>
+    	 		<div class="dropdown">
+    				<a class="btn" data-toggle="dropdown" href="#">Links<b class="caret"></b></a>
+    				<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    					<li><a tabindex="-1" href="#">Link1</a></li>
+    					<li><a tabindex="-1" href="#">Link2</a></li>
+    					<li><a tabindex="-1" href="#">Link3</a></li>
+    					<li class="divider"></li>
+    					<li class="dropdown-submenu">
+							<a tabindex="-1" href="#">More links</a>
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1" href="#">Link4</a></li>
+								<li><a tabindex="-1" href="#">Link5</a></li>
+								<li><a tabindex="-1" href="#">Link6</a></li>
+								<li><a tabindex="-1" href="#">Link7</a></li>
+							</ul>
+						</li>
+	   				</ul>
+    			</div>
+    	 	</li>
+    	 	<li class="divider-vertical"></li>
+    	 	<li>
+    	  	 	<div class="btn-group">
+    				<button class="btn">1</button>
+				    <button class="btn">2</button>
+    				<button class="btn">3</button>
+    		    </div>
+    	 	</li>
+    	 	<li class="divider-vertical"></li>
+    	 	<li>
+			    <div class="btn-group dropup">
+				    <button class="btn">Dropup</button>
+				    <button class="btn dropdown-toggle" data-toggle="dropdown">
+				    	<span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu">
+				    	<li><a tabindex="-1" href="#">Link8</a></li>
+						<li><a tabindex="-1" href="#">Link9</a></li>
+					</ul>
+    			</div>
+    	 	</li>
+    	 	<li>
+    	 		<ul class="nav nav-pills">
+				    <li class="dropdown">
+					    <a class="dropdown-toggle"
+					    data-toggle="dropdown"
+					    href="#">
+					    1
+					    <b class="caret"></b>
+					    </a>
+					    <ul class="dropdown-menu">
+					    	<li><a tabindex="-1" href="#">Link8</a></li>
+							<li><a tabindex="-1" href="#">Link9</a></li>
+				    	</ul>
+    				</li>
+    				<li class="dropdown">
+					    <a class="dropdown-toggle"
+					    data-toggle="dropdown"
+					    href="#">
+					    2
+					    <b class="caret"></b>
+					    </a>
+					    <ul class="dropdown-menu">
+					    	<li><a tabindex="-1" href="#">Link8</a></li>
+							<li><a tabindex="-1" href="#">Link9</a></li>
+							<li><a tabindex="-1" href="#">Link8</a></li>
+							<li><a tabindex="-1" href="#">Link9</a></li>
+				    	</ul>
+    				</li>
+    				<li><a tabindex="-1" href="#">3</a></li>
+    				<li><a tabindex="-1" href="#">4</a></li>
+   				</ul>	
+    	 	</li>	
+        </ul>
+
+        <form class="navbar-search pull-right">
+    		<input type="text" class="search-query" placeholder="Search">
+    	</form>
+
+	</div>
+</div>	
+
+
+ 		<%= yield %>
+	</div>
 </body>
 </html>
