@@ -1,0 +1,115 @@
+.row
+  .span2
+    %ul.nav.nav-list
+      %li.nav-header List header
+      %li.active
+        %a{:href => "#"}
+          %i.icon-eye-open>
+          Home
+      %li
+        %a{:href => "#"}
+          %i.icon-eject>
+          Library
+      %li
+        %a{:href => "#"}
+          %i.icon-trash>
+          1
+      %li
+        %a{:href => "#"}
+          %i.icon-hand-left>
+          2
+      %li.nav-header List header2
+      %li.active
+        %a{:href => "#"}
+          %i.icon-fire>
+          Home1
+      %li
+        %a{:href => "#"}
+          %i.icon-heart>
+          1
+      %li.dropdown-submenu
+        %a{:href => "#", :tabindex => "-1"}
+          %i.icon-wrench>
+          more
+        %ul.dropdown-menu
+          %li
+            %a{:href => "#"}
+              %i.icon-filter>
+              1
+          %li
+            %a{:href => "#"}
+              %i.icon-ban-circle>
+              2
+          %li
+            %a{:href => "#"}
+              %i.icon-eye-close>
+              3
+          %li
+            %a{:href => "#"}
+              %i.icon-plane>
+              4
+      %li.dropdown-submenu
+        %a{:href => "#", :tabindex => "-1"}
+          %i.icon-circle-arrow-down>
+          ababa
+        %ul.dropdown-menu
+          %li
+            %a{:href => "#"} 1
+          %li
+            %a{:href => "#"} 2
+          %li
+            %a{:href => "#"} 3
+          %li.dropdown-submenu
+            %a{:href => "#", :tabindex => "-1"} 4
+            %ul.dropdown-menu
+              %li
+                %a{:href => "#"} 1
+              %li
+                %a{:href => "#"} 2
+              %li
+                %a{:href => "#"} 3
+              %li
+                %a{:href => "#"} 4
+      %li.active
+        %a{:href => "#"} Home2
+      %li
+        %a{:href => "#"} 1
+      %li
+        %a{:href => "#"} 2
+      %li
+        %a{:href => "#"} 3
+  .span10
+    %p.well
+      %a{:href => "#"}> Library
+      Hello
+    #accordion2.accordion
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
+            Collapsible Group Item #1
+        #collapseOne.accordion-body.collapse.in
+          .accordion-inner
+            Anim adsasfas.
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
+            Collapsible Group Item #2
+        #collapseTwo.accordion-body.collapse
+          .accordion-inner
+            adsfasdasdfas pgasdgasd..
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapse3"}
+            Collapsible Group Item #3
+        #collapse3.accordion-body.collapse
+          .accordion-inner
+            asdasdasd lhas dlkdh lkhaslkh lkh lkasdh lkash lkhda ;lkash hdh hdh khsk
+#myModalHide.hide
+  #myModal.modal{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-header
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+      %h3#myModalLabel Modal header
+    .modal-body
+      %p One fine body…
+    .modal-footer
+      %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} ЗАКРЫТЬ

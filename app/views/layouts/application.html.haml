@@ -1,0 +1,50 @@
+!!!
+%html
+  %head
+    %title BssBootstrapApp
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      .navbar
+        .navbar-inner
+          %a.brand{href: "#"} Title
+          %ul.nav
+            %li.active
+              %a{href: "#"} Home
+            %li
+              %a{href: "#"} Link1
+            %li
+              %a{href: "#"} Link2
+            %li
+              %a.hidden-phone{href: "#"} Link3
+            %li
+              %a.hidden-phone{href: "#"} Link4
+            %li
+              %a.hidden-phone{href: "#"} Link5
+            %li
+              %a.hidden-phone{href: "#"} Link6
+            %li
+              .visible-phone
+                .dropdown
+                  %a.btn.btn-inverse{"data-toggle" => "dropdown", href: "#"} Links
+                  %b.caret
+                  %ul.dropdown-menu{role: "menu", "aria-labelledby" => "dLabel"}
+                    %li
+                      %a{tabindex: "-1", href: "#"} Link3
+                    %li
+                      %a{tabindex: "-1", href: "#"} Link4 
+                    %li
+                      %a{tabindex: "-1", href: "#"} Link5 
+                    %li
+                      %a{tabindex: "-1", href: "#"} Link6
+            %li
+              %botton.btn.btn-inverse{href: "#myModalHide", role: "button", "data-toggle" => "modal"} Launch modal
+          %form.navbar-search.pull-right
+            .controls
+              .input-prepend
+                %span.add-on
+                  %img{src: "glyphicons_027_search.png", width: "20", height: "20"}
+                %input#inputIcon.span2{type: "text", placeholder: "Enter search data…"}
+      = yield              
